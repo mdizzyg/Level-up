@@ -128,12 +128,16 @@ PostgreSQL
 
 Хранит категории, по которым пользователь получает доход или размещает капитал.
 
+## 4.2 categories
+
 | Поле | Тип данных | Ограничения | Описание |
 |---|---|---|---|
 | id | BIGSERIAL | PRIMARY KEY | Уникальный идентификатор категории |
-| user_id | BIGINT | FOREIGN KEY, NOT NULL | Пользователь, которому принадлежит категория |
+| user_id | BIGINT | FOREIGN KEY | Пользователь, которому принадлежит категория |
 | name | VARCHAR(100) | NOT NULL | Название категории |
 | description | TEXT |  | Описание категории |
+| is_system | BOOLEAN | NOT NULL, DEFAULT FALSE | Является ли категория системной |
+| is_active | BOOLEAN | NOT NULL, DEFAULT TRUE | Активна ли категория и отображается ли пользователю |
 | created_at | TIMESTAMP | NOT NULL | Дата создания категории |
 
 ### Связи
