@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+sqlalchemy
+pcycopg2 - binary
+pythan - dotenv
